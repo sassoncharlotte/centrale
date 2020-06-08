@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import PokemonDisplayer from "./components/PokemonDisplayer";
 import HomePage from "./components/HomePage";
+import recherche_film from "./components/recherche_film"
 
 function App() {
   return (
@@ -34,6 +35,9 @@ function App() {
           </Route>
           <Route path="/">
             <HomePage />
+          </Route>
+          <Route path="/rechercher_film">
+            <recherche_film />
           </Route>
         </Switch>
       </div>
