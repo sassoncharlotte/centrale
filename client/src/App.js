@@ -15,6 +15,15 @@ function App() {
             <li>
               <Link to="/demo">API Fetch demo</Link>
             </li>
+            <li>
+              <Link to="/rechercher_film">Rechercher un film</Link> 
+            </li>
+            <li>
+              <Link to="creer_film">Créer un film</Link>
+            </li>
+            <li>
+              <Link to="lister_film">Lister des films</Link>
+            </li>
           </ul>
         </nav>
         {/* A <Switch> looks through its children <Route>s and
