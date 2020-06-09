@@ -1,13 +1,13 @@
 import React from "react";
-//import Logo_film from "./logo_film.png"
-import Logo from "./logo.svg"
+import logo_film from "./logo_film.png";
+import logo from "./logo.svg";
 import "./HomePage.css";
 
 const HomePage = () => {
   return (
     <div className="HomePage">
       <header className="HomePage-header">
-        <img source={Logo} alt='logo film' />
+        <img src={logo_film} alt="logo" /> 
         <p>
           Page d'accueil
         </p>
