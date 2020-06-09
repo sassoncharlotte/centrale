@@ -26,4 +26,3 @@ module.exports.handle = async event => {
         body: JSON.stringify(item),
     }
 }
-
