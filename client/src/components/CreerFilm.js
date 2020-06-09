@@ -2,20 +2,18 @@ import React from "react";
 import "./Interface.css"
 
 
-const RechercheFilm = () => {
+const CreerFilm= () => {
   return (
     <div>
       <div className="Titre">
         <h1>
-          Rechercher un film
+          Créer un film
         </h1>
       </div>
       <div className="Interface">
         <header className="FilmInterface">
           <p>
-            <input type="text" />
-            &emsp; 
-            <input type="submit" value="Rechercher un Film" />
+            
           </p>
         </header>
       </div>
@@ -24,4 +22,4 @@ const RechercheFilm = () => {
 };
 
 
-export default RechercheFilm;
+export default CreerFilm;

@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import PokemonDisplayer from "./components/PokemonDisplayer";
 import HomePage from "./components/HomePage";
 import RechercheFilm from "./components/RechercheFilm"
+import CreerFilm from "./components/CreerFilm"
 
 function App() {
   return (
@@ -30,6 +31,9 @@ function App() {
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
         <Switch>
+          <Route path = "/creer_film">
+            <CreerFilm />
+          </Route>
           <Route path="/rechercher_film">
             <RechercheFilm />
           </Route>

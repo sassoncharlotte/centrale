@@ -7,7 +7,7 @@ const HomePage = () => {
     <div className="HomePage">
       <header className="HomePage-header">
         <p>
-          Comment ça marche? :(
+          Page d'accueil
         </p>
       </header>
     </div>
