@@ -5,6 +5,7 @@ import HomePage from "./components/HomePage";
 import RechercheFilm from "./components/RechercheFilm";
 import CreerFilm from "./components/CreerFilm";
 import ListerFilm from "./components/ListerFilm"
+import "./App.css"
 
 function App() {
   return (
