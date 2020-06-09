@@ -6,7 +6,9 @@ const HomePage = () => {
   return (
     <div className="HomePage">
       <header className="HomePage-header">
-        <img src={logo} className="HomePage-logo" alt="logo" />
+        <p>
+          Page d'accueil
+        </p>
       </header>
     </div>
   );
