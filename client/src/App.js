@@ -2,8 +2,9 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import PokemonDisplayer from "./components/PokemonDisplayer";
 import HomePage from "./components/HomePage";
-import RechercheFilm from "./components/RechercheFilm"
-import CreerFilm from "./components/CreerFilm"
+import RechercheFilm from "./components/RechercheFilm";
+import CreerFilm from "./components/CreerFilm";
+import ListerFilm from "./components/ListerFilm"
 
 function App() {
   return (
@@ -31,6 +32,9 @@ function App() {
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
         <Switch>
+          <Route path='/lister_film'>
+            <ListerFilm />
+          </Route>
           <Route path = "/creer_film">
             <CreerFilm />
           </Route>
