@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import PokemonDisplayer from "./components/PokemonDisplayer";
+import PokemonDisplayer from "./components/MoviesDisplayer";
 import HomePage from "./components/HomePage";
 
 function App() {
@@ -13,14 +13,14 @@ function App() {
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/demo">API Fetch demo</Link>
+              <Link to="/liste_films">Liste de films</Link>
             </li>
           </ul>
         </nav>
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
         <Switch>
-          <Route path="/demo">
+          <Route path="/liste_films">
             <PokemonDisplayer />
           </Route>
           <Route path="/">
