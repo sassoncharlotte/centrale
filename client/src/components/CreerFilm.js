@@ -1,25 +1,32 @@
 import React from "react";
-import "./Interface.css"
+import { withKnobs } from "@storybook/addon-knobs";
 
-
-const CreerFilm= () => {
-  return (
-    <div>
-      <div className="Titre">
-        <h1>
-          Créer un film
-        </h1>
-      </div>
-      <div className="Interface">
-        <header className="FilmInterface">
-          <p>
-            
-          </p>
-        </header>
-      </div>
-      </div>  
-  );
+export default {
+  title: "Fetching data",
+  decorators: [withKnobs],
 };
 
+export const SubmitEventStory = () => {
+  const input = React.createRef();
 
-export default CreerFilm;
+  const handleSubmit = async (event) => {
+    const response = await fetch (
+      "https://xpzicf3p88.execute-api.eu-west-1.amazonaws.com/dev/items",
+      {
+        method: 'POST',
+        body: JSON.stringify({ name: input.current.value }),
+      }
+    );
+    event.preventDefault();
+  };
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <label>
+        Name:
+        <input type="text" ref={input} />
+      </label>
+      <input type="submit" value="Submit" />
+    </form>
+  );
+};

@@ -4,6 +4,7 @@ import PokemonDisplayer from "./components/MoviesDisplayer";
 import HomePage from "./components/HomePage";
 import RechercheFilm from "./components/RechercheFilm"
 import CreerFilm from "./components/CreerFilm"
+import PokeDisplay from "./components/PokeDisplay"
 
 function App() {
   return (
@@ -32,13 +33,13 @@ function App() {
             renders the first one that matches the current URL. */}
         <Switch>
           <Route path = "/creer_film">
-            <CreerFilm />
+            <PokeDisplay />
           </Route>
           <Route path="/rechercher_film">
             <RechercheFilm />
           </Route>
-          <Route path="/demo">
-            <PokemonDisplayer />
+          <Route path="/liste_films">
+            <HomePage />
           </Route>
           <Route path="/">
             <HomePage />
