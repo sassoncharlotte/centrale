@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const PokemonDisplayer = () => {
+const MoviesDisplayer = () => {
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
   const [items, setItems] = useState([]);
@@ -9,7 +9,7 @@ const PokemonDisplayer = () => {
 
   const fetchExample = async () => {
     try {
-      const response = await fetch("https://pokeapi.co/api/v2/pokemon/");
+      const response = await fetch("https://mwht0zbnw6.execute-api.eu-west-1.amazonaws.com/dev/items/{id}",  method: 'GET',);
       const responseJson = await response.json();
       setIsLoaded(true);
       setError(false);
@@ -27,7 +27,7 @@ const PokemonDisplayer = () => {
     // changes = strict egality, so beware when mutating objects
   }, [fetchAgain]);
 
-  const displayPokemons = () => {
+  const displayMovies = () => {
     if (error) {
       return <div>Error: {error.message}</div>;
     } else if (!isLoaded) {
@@ -46,9 +46,9 @@ const PokemonDisplayer = () => {
   return (
     <div>
       <button onClick={triggerFetchAgain}>Fetch again</button>
-      {displayPokemons()}
+      {displayMovies()}
     </div>
   );
 };
 
-export default PokemonDisplayer;
+export default MoviesDisplayer;
