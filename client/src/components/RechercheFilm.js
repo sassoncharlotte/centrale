@@ -4,6 +4,7 @@ import "./Interface.css"
 
 
 const RechercheFilm = () => {
+  
   return (
     <div>
       <div className="Titre">
@@ -23,6 +24,7 @@ const RechercheFilm = () => {
       </div>  
   );
 };
+
 
 
 export default RechercheFilm;

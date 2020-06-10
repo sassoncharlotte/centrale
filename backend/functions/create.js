@@ -1,7 +1,7 @@
-const uuid = require('uuid');
 const DynamoDB = require('aws-sdk/clients/dynamodb');
 
 module.exports.handle = async event => {
+
     const data = JSON.parse(event.body);
 
     if (!process.env.tableName) {
@@ -10,9 +10,8 @@ module.exports.handle = async event => {
     const dynamoDb = new DynamoDB.DocumentClient();
 
     const item = {
-        type: 'items',
-        uuid: uuid.v1(),
-        content: data.content,
+        type : 'Movie',
+        uuid : data.name,
         createdAt: Date.now(),
     }
 
