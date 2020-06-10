@@ -9,7 +9,7 @@ module.exports.handle = async event => {
     const dynamoDb = new DynamoDB.DocumentClient();
 
     const item = {
-        type: 'Movies',
+        type: 'Movie',
         uuid: data.name,
         createdAt: Date.now(),
     }
