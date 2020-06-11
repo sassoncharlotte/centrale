@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const PokemonDisplayer = () => {
+const MovieDisplayer = () => {
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
   const [items, setItems] = useState([]);
@@ -51,4 +51,4 @@ const PokemonDisplayer = () => {
   );
 };
 
-export default PokemonDisplayer;
+export default MovieDisplayer;

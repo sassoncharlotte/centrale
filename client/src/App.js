@@ -1,12 +1,9 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import MoviesDisplayer from "./components/MoviesDisplayer";
+import MovieDisplayer from "./components/MovieDisplayer";
 import HomePage from "./components/HomePage";
 import RechercheFilm from "./components/RechercheFilm";
 import "./App.css"
-
-import HomePage from "./components/HomePage";
-import RechercheFilm from "./components/RechercheFilm"
 import SubmitEventStory from "./components/CreerFilms"
 
 function App() {
@@ -39,7 +36,7 @@ function App() {
             <RechercheFilm />
           </Route>
           <Route path="/liste_films">
-            <MoviesDisplayer />
+            <MovieDisplayer />
           </Route>
           <Route path="/">
             <HomePage />
