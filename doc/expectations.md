@@ -10,9 +10,9 @@ L'objectif est de développer le front d'une application de recommandations pers
 ### Attendu back
 
 #### Palier 1
-- une route pour la récupération d'un film
-- une route pour créer des films
-- une route pour lister des films
+- une route pour la récupération d'un film NO
+- une route pour créer des films OK
+- une route pour lister des films OK
 
 #### Palier 2
 - une route pour récupérer des films selon un critère
@@ -24,17 +24,17 @@ L'objectif est de développer le front d'une application de recommandations pers
 ### Attendu front
 
 #### Palier 1
-- une page d'accueil
-- une page avec la liste des films /movies
+- une page d'accueil OK
+- une page avec la liste des films /movies OK
 - une page par film movie/:movieId
 - un moyen de noter un film (page, popin, section, etc.)
-- un moyen de demander et afficher une recommandation (page, popin, section, etc.)
-- une navigation entre toutes ces pages
+- un moyen de demander et afficher une recommandation(page, popin, section, etc.)
+- une navigation entre toutes ces pages OK
 
 #### Palier 2
-- une page pour ajouter un nouveau film
+- une page pour ajouter un nouveau film OK
 - des pages stylisées qui donnent envie d'utiliser l'application
-- paginer la liste des films
+- paginer la liste des films NO
 
 #### Palier 3
 - écrire un test unitaire avec jest

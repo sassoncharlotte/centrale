@@ -16,6 +16,7 @@ module.exports.handle = async event => {
         ExpressionAttributeValues: {
             ':type': 'Movie',
         },
+        Limit: '10'
     }).promise();
 
     return {

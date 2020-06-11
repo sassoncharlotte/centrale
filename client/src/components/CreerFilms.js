@@ -1,7 +1,6 @@
 import React from "react";
 import "./Interface.css";
 
-
 const SubmitEventStory = () => {
   const input = React.createRef();
 

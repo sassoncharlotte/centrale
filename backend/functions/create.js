@@ -24,8 +24,13 @@ module.exports.handle = async event => {
     return {
         statusCode: 200,
         headers: {
+<<<<<<< HEAD
           'Access-Control-Allow-Origin': 'http://localhost:3000',
           'Access-Control-Allow-Credentials': 'true'
+=======
+            'Access-Control-Allow-Origin': 'http://localhost:3000',
+            'Access-Control-Allow-Credentials': 'true',
+>>>>>>> 529cfb498c2368acdb2665cb013dfd8b54c5fb17
         },
         body: JSON.stringify(item),
     }
