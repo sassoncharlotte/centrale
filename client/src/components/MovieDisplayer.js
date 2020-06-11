@@ -9,7 +9,7 @@ const MovieDisplayer = () => {
 
   const fetchExample = async () => {
     try {
-      const response = await fetch("https://154ggc17qg.execute-api.eu-west-1.amazonaws.com/dev/items");
+      const response = await fetch("https://c1ktp61r65.execute-api.eu-west-1.amazonaws.com/dev/items");
       const responseJson =  await response.json();
       setIsLoaded(true);
       setError(false);
