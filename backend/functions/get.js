@@ -9,6 +9,7 @@ module.exports.handle = async event => {
     }
 
     const dynamoDb = new DynamoDB.DocumentClient();
+
     const result = await dynamoDb.get({
         TableName: process.env.tableName,
         Key: {
@@ -32,7 +33,7 @@ module.exports.handle = async event => {
             headers: {
                 'Access-Control-Allow-Origin': 'http://localhost:3000',
                 'Access-Control-Allow-Credentials': 'true'
-              },
+            },
             body: 'Not found'
         }
     }

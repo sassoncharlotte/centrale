@@ -6,6 +6,7 @@ module.exports.handle = async event => {
     }
 
     const dynamoDb = new DynamoDB.DocumentClient();
+    
     const result = await dynamoDb.query({
         TableName: process.env.tableName,
         KeyConditionExpression: '#type = :type',

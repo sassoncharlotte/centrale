@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const MoviesDisplayer = () => {
+const PokemonDisplayer = () => {
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
   const [items, setItems] = useState([]);
@@ -27,7 +27,7 @@ const MoviesDisplayer = () => {
     // changes = strict egality, so beware when mutating objects
   }, [fetchAgain]);
 
-  const displayMovies = () => {
+  const displayPokemon = () => {
     if (error) {
       return <div>Error: {error.message}</div>;
     } else if (!isLoaded) {
@@ -46,9 +46,9 @@ const MoviesDisplayer = () => {
   return (
     <div>
       <button onClick={triggerFetchAgain}>Fetch again</button>
-      {displayMovies()}
+      {displayPokemon()}
     </div>
   );
 };
 
-export default MoviesDisplayer;
+export default PokemonDisplayer;

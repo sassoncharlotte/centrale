@@ -3,9 +3,11 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import MoviesDisplayer from "./components/MoviesDisplayer";
 import HomePage from "./components/HomePage";
 import RechercheFilm from "./components/RechercheFilm";
-import CreerFilm from "./components/CreerFilm";
 import "./App.css"
 
+import HomePage from "./components/HomePage";
+import RechercheFilm from "./components/RechercheFilm"
+import SubmitEventStory from "./components/CreerFilms"
 
 function App() {
   return (
@@ -31,7 +33,7 @@ function App() {
             renders the first one that matches the current URL. */}
         <Switch>
           <Route path = "/creer_film">
-            <CreerFilm />
+            <SubmitEventStory />
           </Route>
           <Route path="/rechercher_film">
             <RechercheFilm />
