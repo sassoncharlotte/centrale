@@ -15,24 +15,14 @@ const SubmitEventStory = () => {
       }
     );
   };
-
-const CreerFilm= () => {
-  
   return (
-    <div>
-      <div className="Titre">
-        <h1>
-          Créer un film
-        </h1>
-      </div>
-      <div className="Interface">
-        <header className="FilmInterface">
-          <p>
-            <NameForm/>
-          </p>
-        </header>
-      </div>
-      </div>  
+    <form onSubmit={handleSubmit}>
+      <label>
+        Name:
+        <input type="text" ref={input} />
+      </label>
+      <input type="submit" value="Submit" />
+    </form>
   );
 };
 

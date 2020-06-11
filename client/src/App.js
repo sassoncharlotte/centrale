@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import HomePage from "./components/HomePage";
 import RechercheFilm from "./components/RechercheFilm"
 import SubmitEventStory from "./components/CreerFilms"
+import MovieDisplayer from "./components/MovieDisplayer"
 
 function App() {
   return (
@@ -34,7 +35,7 @@ function App() {
             <RechercheFilm />
           </Route>
           <Route path="/liste_films">
-            <MoviesDisplayer />
+            <MovieDisplayer />
           </Route>
           <Route path="/">
             <HomePage />
