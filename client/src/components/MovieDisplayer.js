@@ -20,12 +20,6 @@ const MovieDisplayer = () => {
     }
   };
 
-  useEffect(() => {
-    setIsLoaded(false);
-    fetchExample();
-    // The useEffect hook will retrigger every time an element in the dependency array changes.
-    // changes = strict egality, so beware when mutating objects
-  }, [fetchAgain]);
 
   const displayPokemon = () => {
     if (error) {
@@ -45,7 +39,7 @@ const MovieDisplayer = () => {
 
   return (
     <div>
-      <button onClick={triggerFetchAgain}>Fetch again</button>
+      <button onClick={triggerFetchAgain}>Liste Film</button>
       {displayPokemon()}
     </div>
   );

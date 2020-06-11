@@ -15,14 +15,18 @@ const SubmitEventStory = () => {
       }
     );
   };
+
+
   
   return (
     <form onSubmit={handleSubmit}>
       <label>
-        Name:
+        Nom : 
+        &nbsp;
         <input type="text" ref={input} />
       </label>
-      <input type="submit" value="Submit" />
+      &nbsp;
+      <input type="submit" value="Créer" />
     </form>
   );
 };
