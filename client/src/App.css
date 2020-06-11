@@ -1,0 +1,8 @@
+nav
+{
+    width: 12em ; /* On a indiqué une largeur (obligatoire) */
+    margin: 2em ; /* On peut donc demander à ce que le bloc soit centré avec auto */
+    border: 1px solid black;
+    text-align: justify;
+    background-color: white;
+}

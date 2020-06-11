@@ -1,0 +1,20 @@
+{
+    "cs-group-10-Thomas-dynamodb": [
+        {
+            "PutRequest": {
+                "Item": {
+                    "type": {"S":"Movie"},
+                    "uuid": {"S":"Avengers"}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "type": {"S":"Movie"},
+                    "uuid": {"S":"Transformers"}
+                }
+            }
+        }
+    ]
+}

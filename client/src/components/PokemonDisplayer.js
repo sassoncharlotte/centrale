@@ -9,11 +9,11 @@ const PokemonDisplayer = () => {
 
   const fetchExample = async () => {
     try {
-      const response = await fetch("http://www.omdbapi.com/?apikey=df3210c6");
-      const responseJson = await response.json();
+      const response = await fetch("https://154ggc17qg.execute-api.eu-west-1.amazonaws.com/dev/items");
+      const responseJson =  await response.json();
       setIsLoaded(true);
       setError(false);
-      setItems(responseJson.results);
+      setItems(responseJson);
     } catch (error) {
       setIsLoaded(true);
       setError(error);
@@ -36,7 +36,7 @@ const PokemonDisplayer = () => {
       return (
         <ul>
           {items.map((item) => (
-            <li key={item.name}>{item.name}</li>
+            <li key={item.uuid}>{item.uuid}</li>
           ))}
         </ul>
       );

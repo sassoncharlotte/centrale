@@ -1,4 +1,7 @@
+
+
 const DynamoDB = require('aws-sdk/clients/dynamodb');
+
 
 module.exports.handle = async event => {
     if (!process.env.tableName) {

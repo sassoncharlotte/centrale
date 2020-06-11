@@ -22,9 +22,6 @@ function App() {
             <li>
               <Link to="creer_film">Créer un film</Link>
             </li>
-            <li>
-              <Link to="lister_film">Lister des films</Link>
-            </li>
           </ul>
         </nav>
         {/* A <Switch> looks through its children <Route>s and
@@ -37,7 +34,7 @@ function App() {
             <RechercheFilm />
           </Route>
           <Route path="/liste_films">
-            <HomePage />
+            <MoviesDisplayer />
           </Route>
           <Route path="/">
             <HomePage />

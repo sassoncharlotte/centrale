@@ -1,6 +1,7 @@
 const DynamoDB = require('aws-sdk/clients/dynamodb');
 
 module.exports.handle = async event => {
+
     const data = JSON.parse(event.body);
 
     if (!process.env.tableName) {
