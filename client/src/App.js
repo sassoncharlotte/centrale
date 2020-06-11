@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import HomePage from "./components/HomePage";
 import RechercheFilm from "./components/RechercheFilm"
-import Pokedisplay from "./components/Pokedisplay"
+import SubmitEventStory from "./components/CreerFilms"
 
 function App() {
   return (
@@ -31,7 +31,7 @@ function App() {
             renders the first one that matches the current URL. */}
         <Switch>
           <Route path = "/creer_film">
-            <Pokedisplay />
+            <SubmitEventStory />
           </Route>
           <Route path="/rechercher_film">
             <RechercheFilm />

@@ -18,11 +18,19 @@ module.exports.handle = async event => {
     if (result.Item) {
         return {
             statusCode: 200,
+            headers: {
+                'Access-Control-Allow-Origin': 'http://localhost:3000',
+                'Access-Control-Allow-Credentials': 'true'
+            },
             body: JSON.stringify(result.Item),
         }
     } else {
         return {
             statusCode: 404,
+            headers: {
+                'Access-Control-Allow-Origin': 'http://localhost:3000',
+                'Access-Control-Allow-Credentials': 'true'
+            },
             body: 'Not found'
         }
     }
