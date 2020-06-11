@@ -9,11 +9,11 @@ const MoviesDisplayer = () => {
 
   const fetchExample = async () => {
     try {
-      const response = await fetch("https://mwht0zbnw6.execute-api.eu-west-1.amazonaws.com/dev/items/{id}",  method: 'GET',);
-      const responseJson = await response.json();
+      const response = await fetch("https://c1ktp61r65.execute-api.eu-west-1.amazonaws.com/dev/items");
+      const responseJson =  await response.json();
       setIsLoaded(true);
       setError(false);
-      setItems(responseJson.results);
+      setItems(responseJson);
     } catch (error) {
       setIsLoaded(true);
       setError(error);
@@ -36,7 +36,7 @@ const MoviesDisplayer = () => {
       return (
         <ul>
           {items.map((item) => (
-            <li key={item.name}>{item.name}</li>
+            <li key={item.uuid}>{item.uuid}</li>
           ))}
         </ul>
       );
