@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Interface.css";
-
+import link from "./link"
 const RechercheFilm = () => {
   
   const [error, setError] = useState(null);
@@ -13,7 +13,7 @@ const RechercheFilm = () => {
   const fetchExample = async (event) => {
     event.preventDefault();
     const response = await fetch(
-      "https://c1ktp61r65.execute-api.eu-west-1.amazonaws.com/dev/items/" + String(input.current.value)
+      link + String(input.current.value)
     );
     const responseJson =  await response.json();
     setItems(responseJson);

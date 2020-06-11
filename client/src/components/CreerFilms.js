@@ -1,16 +1,16 @@
 import React from "react";
 import "./Interface.css";
-
+import link from "./link"
 const SubmitEventStory = () => {
   const input = React.createRef();
 
   const handleSubmit = async (event) => {
     event.preventDefault();
     const response = await fetch(
-      "https://c1ktp61r65.execute-api.eu-west-1.amazonaws.com/dev/items",
+      link,
       {
         method: "POST",
-        body: JSON.stringify({ name: input.current.value }),
+        body: JSON.stringify({ name : input.current.value }),
       }
     );
   };

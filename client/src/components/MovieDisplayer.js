@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import link from "./link"
 
 const MovieDisplayer = () => {
   const [error, setError] = useState(null);
@@ -9,7 +10,7 @@ const MovieDisplayer = () => {
 
   const fetchExample = async () => {
     try {
-      const response = await fetch("https://c1ktp61r65.execute-api.eu-west-1.amazonaws.com/dev/items");
+      const response = await fetch(link);
       const responseJson =  await response.json();
       setIsLoaded(true);
       setError(false);

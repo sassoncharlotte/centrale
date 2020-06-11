@@ -1,6 +1,6 @@
 import React from "react";
 import logo_film from "./Logo_film.png";
-import logo from "./logo.svg";
+
 import "./HomePage.css";
 
 const HomePage = () => {
