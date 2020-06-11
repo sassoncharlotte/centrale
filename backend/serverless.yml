@@ -34,6 +34,16 @@ functions:
             origin: http://localhost:3000
             allowCredentials: true
 
+  moviePage:
+    handler: functions/moviePage.handle
+    events:
+      - http:
+          method: get
+          path: /{uuid}
+          cors:
+            origin: http://localhost:3000
+            allowCredentials: true
+
   create:
     handler: functions/create.handle
     events:

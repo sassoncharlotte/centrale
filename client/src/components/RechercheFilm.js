@@ -11,6 +11,10 @@ const RechercheFilm = () => {
   const [fetchAgain, setFetchAgain] = useState(false);
   const triggerFetchAgain = () => setFetchAgain(!fetchAgain);
 
+  const redirection = () => {
+    window.open("https://154ggc17qg.execute-api.eu-west-1.amazonaws.com/dev/" + String(input.current.value), String(input.current.value))
+  }
+
   const fetchExample = async (event) => {
     event.preventDefault();
     const response = await fetch(
@@ -37,6 +41,7 @@ const RechercheFilm = () => {
         <input type="submit" value="Submit" />
       </form>
       {displayMovie()}
+      <button onClick={redirection}>Affichage de la page du film</button>
     </div>
   );
 };

@@ -10,7 +10,7 @@ L'objectif est de développer le front d'une application de recommandations pers
 ### Attendu back
 
 #### Palier 1
-- une route pour la récupération d'un film NO
+- une route pour la récupération d'un film OK
 - une route pour créer des films OK
 - une route pour lister des films OK
 
