@@ -1,1 +1,1 @@
-const link = "https://qwg2tsyzmf.execute-api.eu-west-1.amazonaws.com/dev/items"
+var link = "https://qwg2tsyzmf.execute-api.eu-west-1.amazonaws.com/dev/items"

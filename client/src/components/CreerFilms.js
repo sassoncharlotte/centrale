@@ -1,13 +1,13 @@
 import React from "react";
 import "./Interface.css";
-import link from "./link"
+
 const SubmitEventStory = () => {
   const input = React.createRef();
 
   const handleSubmit = async (event) => {
     event.preventDefault();
     const response = await fetch(
-      link,
+      "https://qwg2tsyzmf.execute-api.eu-west-1.amazonaws.com/dev/items",
       {
         method: "POST",
         body: JSON.stringify({ name : input.current.value }),
@@ -18,8 +18,14 @@ const SubmitEventStory = () => {
 
   
   return (
+    <div>
+      <h1>
+          Créer un film
+      </h1>
+      
+    <div className="FilmInterface">
     <form onSubmit={handleSubmit}>
-      <label>
+      <label className ="Nomgenre">
         Nom : 
         &nbsp;
         <input type="text" ref={input} />
@@ -27,6 +33,8 @@ const SubmitEventStory = () => {
       &nbsp;
       <input type="submit" value="Créer" />
     </form>
+    </div>
+    </div>
   );
 };
 

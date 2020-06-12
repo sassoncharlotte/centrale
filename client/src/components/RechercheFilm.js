@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import "./Interface.css";
-import link from "./link"
 const RechercheFilm = () => {
   
   const [error, setError] = useState(null);
@@ -13,7 +12,7 @@ const RechercheFilm = () => {
   const fetchExample = async (event) => {
     event.preventDefault();
     const response = await fetch(
-      link + String(input.current.value)
+      "https://qwg2tsyzmf.execute-api.eu-west-1.amazonaws.com/dev/items/" + String(input.current.value)
     );
     const responseJson =  await response.json();
     setItems(responseJson);
@@ -21,21 +20,28 @@ const RechercheFilm = () => {
 
   const displayMovie = () => {
     return(
-      <ul>
-        {items.uuid}
-      </ul>);
+      <div className="Nomgenre">
+        <p>
+        Nom : {items.uuid} 
+        </p>
+        Genre : {items.genre}
+      </div>);
   };
 
   return (
     <div>
+      <h1>
+        Rechercher un Film
+      </h1>
+    <div class="FilmInterface">
       <form onSubmit={fetchExample}>
         <label>
-          Name:
         <input type="text" ref={input} />
         </label>
-        <input type="submit" value="Submit" />
+        <input type="submit" value="Rechercher" />
       </form>
       {displayMovie()}
+    </div>
     </div>
   );
 };

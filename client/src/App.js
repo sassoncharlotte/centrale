@@ -8,8 +8,7 @@ import SubmitEventStory from "./components/CreerFilms"
 
 function App() {
   return (
-    <Router>
-      <div>
+    <Router>       
         <nav>
           <ul>
             <li>
@@ -42,7 +41,7 @@ function App() {
             <HomePage />
           </Route>
         </Switch>
-      </div>
+      
     </Router>
   );
 }

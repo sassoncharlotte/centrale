@@ -11,6 +11,7 @@ module.exports.handle = async event => {
 
     const item = {
         type : 'Movie',
+        genre : data.genre,
         uuid : data.name,
         createdAt: Date.now(),
     }

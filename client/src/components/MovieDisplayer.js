@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import link from "./link"
+import "./Interface.css";
 
 const MovieDisplayer = () => {
   const [error, setError] = useState(null);
@@ -10,7 +10,7 @@ const MovieDisplayer = () => {
 
   const fetchExample = async () => {
     try {
-      const response = await fetch(link);
+      const response = await fetch("https://qwg2tsyzmf.execute-api.eu-west-1.amazonaws.com/dev/items");
       const responseJson =  await response.json();
       setIsLoaded(true);
       setError(false);
@@ -21,6 +21,12 @@ const MovieDisplayer = () => {
     }
   };
 
+  useEffect(() => {
+    setIsLoaded(false);
+    fetchExample();
+    // The useEffect hook will retrigger every time an element in the dependency array changes.
+    // changes = strict egality, so beware when mutating objects
+  }, [fetchAgain]);
 
   const displayMovie = () => {
     if (error) {
@@ -40,8 +46,13 @@ const MovieDisplayer = () => {
 
   return (
     <div>
-      <button onClick={triggerFetchAgain}>Fetch again</button>
+      <h1>
+        Liste des films
+      </h1>
+    <div className="FilmInterface">
+      <button onClick={triggerFetchAgain}>Lister les films</button>
       {displayMovie()}
+    </div>
     </div>
   );
 };
